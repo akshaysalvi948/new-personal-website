@@ -196,7 +196,7 @@ def load_css():
         display: inline-block;
         padding: 0.5rem 1rem;
         margin: 0 0.5rem;
-        color: #333333;
+        color: #000000;
         text-decoration: none;
         border-radius: 10px;
         transition: all 0.3s ease;
