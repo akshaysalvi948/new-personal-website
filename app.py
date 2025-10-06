@@ -14,6 +14,10 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Clear cache to ensure fresh data
+if hasattr(st, 'cache_data'):
+    st.cache_data.clear()
+
 # Custom CSS
 def load_css():
     st.markdown("""
@@ -296,13 +300,13 @@ def main():
     <div class="header-container">
         <div class="logo-container">
             <div class="logo-circle">
-                <div class="logo-text">{PERSONAL_INFO['name'].split()[0][0]}{PERSONAL_INFO['name'].split()[-1][0]}</div>
+                <div class="logo-text">{PERSONAL_INFO['name'][0]}</div>
             </div>
             <div class="logo-name">{PERSONAL_INFO['name']}</div>
         </div>
         
         <div class="profile-image-container">
-            <img src="https://via.placeholder.com/200x200/000000/FFFFFF?text={PERSONAL_INFO['name'].split()[0][0]}{PERSONAL_INFO['name'].split()[-1][0]}" 
+            <img src="https://via.placeholder.com/200x200/000000/FFFFFF?text={PERSONAL_INFO['name'][0]}" 
                  alt="Profile Image" class="profile-image">
         </div>
         
@@ -462,15 +466,15 @@ def main():
                 <div style="margin-top: 2rem;">
                     <h4 style="color: #000000; margin-bottom: 1rem;">Connect with me</h4>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="{PERSONAL_INFO['linkedin']}" target="_blank" 
+                        <a href="{PERSONAL_INFO.get('linkedin', '#')}" target="_blank" 
                            style="color: #000000; text-decoration: none; font-weight: 500; border: 1px solid #000000; padding: 0.5rem 1rem; border-radius: 5px; transition: all 0.3s ease;">
                             🔗 LinkedIn
                         </a>
-                        <a href="{PERSONAL_INFO['github']}" target="_blank" 
+                        <a href="{PERSONAL_INFO.get('github', '#')}" target="_blank" 
                            style="color: #000000; text-decoration: none; font-weight: 500; border: 1px solid #000000; padding: 0.5rem 1rem; border-radius: 5px; transition: all 0.3s ease;">
                             🐙 GitHub
                         </a>
-                        <a href="{PERSONAL_INFO['twitter']}" target="_blank" 
+                        <a href="{PERSONAL_INFO.get('twitter', '#')}" target="_blank" 
                            style="color: #000000; text-decoration: none; font-weight: 500; border: 1px solid #000000; padding: 0.5rem 1rem; border-radius: 5px; transition: all 0.3s ease;">
                             🐦 Twitter
                         </a>
