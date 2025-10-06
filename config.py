@@ -2,15 +2,15 @@
 # Update these values to customize your portfolio
 
 PERSONAL_INFO = {
-    "name": "Mangesh",
+    "name": "Akshay Salvi",
     "title": "Data Scientist & Analytics Professional",
     "description": "Passionate data scientist with expertise in machine learning, statistical analysis, and data visualization. Dedicated to transforming complex data into actionable insights that drive business growth and innovation.",
-    "email": "mangesh@example.com",
-    "phone": "+91 98765 43210",
-    "location": "India",
-    "linkedin": "https://www.linkedin.com/in/mangesh/",
-    "github": "https://github.com/mangesh",
-    "twitter": "https://twitter.com/mangesh"
+    "email": "akshaysalvi94@gmail.com",
+    "phone": "+91 7208 974399",
+    "location": "Mumbai, India",
+    "linkedin": "https://www.linkedin.com/in/akshay-salvi-2869b2125/",
+    "github": "https://github.com/akshaysalvi948",
+    "twitter": "https://twitter.com/akshaysalvi"
 }
 
 EDUCATION = [

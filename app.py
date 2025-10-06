@@ -47,27 +47,6 @@ def load_css():
         border: 2px solid #000000;
     }
     
-    /* Profile Image Styles */
-    .profile-image-container {
-        margin-bottom: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .profile-image {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        border: 4px solid #000000;
-        object-fit: cover;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease;
-    }
-    
-    .profile-image:hover {
-        transform: scale(1.05);
-    }
     
     /* Logo Styles */
     .logo-container {
@@ -300,14 +279,9 @@ def main():
     <div class="header-container">
         <div class="logo-container">
             <div class="logo-circle">
-                <div class="logo-text">{PERSONAL_INFO['name'][0]}</div>
+                <div class="logo-text">{PERSONAL_INFO['name'].split()[0][0]}{PERSONAL_INFO['name'].split()[-1][0]}</div>
             </div>
             <div class="logo-name">{PERSONAL_INFO['name']}</div>
-        </div>
-        
-        <div class="profile-image-container">
-            <img src="https://via.placeholder.com/200x200/000000/FFFFFF?text={PERSONAL_INFO['name'][0]}" 
-                 alt="Profile Image" class="profile-image">
         </div>
         
         <h1 class="name-title">{PERSONAL_INFO['name']}</h1>
