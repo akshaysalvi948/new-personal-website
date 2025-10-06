@@ -194,21 +194,25 @@ def load_css():
     
     .nav-link {
         display: inline-block;
-        padding: 0.5rem 1rem;
+        padding: 0.8rem 1.5rem;
         margin: 0 0.5rem;
         color: #000000;
         text-decoration: none;
-        border-radius: 10px;
+        border-radius: 8px;
         transition: all 0.3s ease;
-        font-weight: 500;
-        border: 1px solid transparent;
+        font-weight: 600;
+        border: 2px solid #000000;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     
     .nav-link:hover {
         background: #000000;
         color: white;
         text-decoration: none;
-        border: 1px solid #000000;
+        border: 2px solid #000000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
     }
     
     /* Stats Cards */
@@ -275,19 +279,24 @@ def main():
     """, unsafe_allow_html=True)
     
     # Header Section
+    name = PERSONAL_INFO['name']
+    title = PERSONAL_INFO['title']
+    description = PERSONAL_INFO['description']
+    initials = name.split()[0][0] + name.split()[-1][0]
+    
     st.markdown(f"""
     <div class="header-container">
         <div class="logo-container">
             <div class="logo-circle">
-                <div class="logo-text">{PERSONAL_INFO['name'].split()[0][0]}{PERSONAL_INFO['name'].split()[-1][0]}</div>
+                <div class="logo-text">{initials}</div>
             </div>
-            <div class="logo-name">{PERSONAL_INFO['name']}</div>
+            <div class="logo-name">{name}</div>
         </div>
         
-        <h1 class="name-title">{PERSONAL_INFO['name']}</h1>
-        <h2 class="subtitle">{PERSONAL_INFO['title']}</h2>
+        <h1 class="name-title">{name}</h1>
+        <h2 class="subtitle">{title}</h2>
         <p class="description">
-            {PERSONAL_INFO['description']}
+            {description}
         </p>
     </div>
     """, unsafe_allow_html=True)
