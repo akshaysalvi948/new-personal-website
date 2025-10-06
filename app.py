@@ -27,42 +27,96 @@ def load_css():
     }
     
     .stApp {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #ffffff 100%);
         font-family: 'Inter', sans-serif;
     }
     
     /* Header Styles */
     .header-container {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(15px);
         border-radius: 20px;
         padding: 2rem;
         margin: 1rem 0;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         text-align: center;
+        border: 2px solid #000000;
+    }
+    
+    /* Profile Image Styles */
+    .profile-image-container {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 4px solid #000000;
+        object-fit: cover;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+    }
+    
+    .profile-image:hover {
+        transform: scale(1.05);
+    }
+    
+    /* Logo Styles */
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    
+    .logo-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #000000, #333333);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .logo-text {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .logo-name {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #000000;
+        letter-spacing: 2px;
     }
     
     .name-title {
         font-size: 3rem;
         font-weight: 700;
-        color: #2d3748;
+        color: #000000;
         margin-bottom: 0.5rem;
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     }
     
     .subtitle {
         font-size: 1.5rem;
-        color: #4a5568;
+        color: #333333;
         margin-bottom: 1rem;
         font-weight: 400;
     }
     
     .description {
         font-size: 1.1rem;
-        color: #718096;
+        color: #666666;
         max-width: 600px;
         margin: 0 auto;
         line-height: 1.6;
@@ -70,20 +124,21 @@ def load_css():
     
     /* Section Styles */
     .section-container {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(15px);
         border-radius: 20px;
         padding: 2rem;
         margin: 1rem 0;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        border: 1px solid #000000;
     }
     
     .section-title {
         font-size: 2rem;
         font-weight: 600;
-        color: #2d3748;
+        color: #000000;
         margin-bottom: 1.5rem;
-        border-bottom: 3px solid #667eea;
+        border-bottom: 3px solid #000000;
         padding-bottom: 0.5rem;
     }
     
@@ -93,79 +148,84 @@ def load_css():
         border-radius: 15px;
         padding: 1.5rem;
         margin: 1rem 0;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border-left: 4px solid #667eea;
+        border-left: 4px solid #000000;
+        border: 1px solid #e0e0e0;
     }
     
     .card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
     
     .card-title {
         font-size: 1.3rem;
         font-weight: 600;
-        color: #2d3748;
+        color: #000000;
         margin-bottom: 0.5rem;
     }
     
     .card-subtitle {
         font-size: 1rem;
-        color: #667eea;
+        color: #333333;
         margin-bottom: 0.5rem;
         font-weight: 500;
     }
     
     .card-content {
-        color: #4a5568;
+        color: #333333;
         line-height: 1.6;
     }
     
     /* Skill Tags */
     .skill-tag {
         display: inline-block;
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        background: linear-gradient(135deg, #000000, #333333);
         color: white;
         padding: 0.5rem 1rem;
         border-radius: 25px;
         margin: 0.25rem;
         font-size: 0.9rem;
         font-weight: 500;
+        border: 1px solid #000000;
     }
     
     /* Contact Icons */
     .contact-icon {
         font-size: 1.5rem;
         margin-right: 0.5rem;
-        color: #667eea;
+        color: #000000;
     }
     
     /* Navigation */
     .nav-container {
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(15px);
         border-radius: 15px;
         padding: 1rem;
         margin: 1rem 0;
         text-align: center;
+        border: 1px solid #000000;
     }
     
     .nav-link {
         display: inline-block;
         padding: 0.5rem 1rem;
         margin: 0 0.5rem;
-        color: #4a5568;
+        color: #333333;
         text-decoration: none;
         border-radius: 10px;
         transition: all 0.3s ease;
         font-weight: 500;
+        border: 1px solid transparent;
     }
     
     .nav-link:hover {
-        background: #667eea;
+        background: #000000;
         color: white;
         text-decoration: none;
+        border: 1px solid #000000;
     }
     
     /* Stats Cards */
@@ -177,13 +237,15 @@ def load_css():
     }
     
     .stat-card {
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        background: linear-gradient(135deg, #000000, #333333);
         color: white;
         padding: 1.5rem;
         border-radius: 15px;
         text-align: center;
         margin: 0.5rem;
         min-width: 150px;
+        border: 2px solid #000000;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
     
     .stat-number {
@@ -232,6 +294,18 @@ def main():
     # Header Section
     st.markdown(f"""
     <div class="header-container">
+        <div class="logo-container">
+            <div class="logo-circle">
+                <div class="logo-text">{PERSONAL_INFO['name'].split()[0][0]}{PERSONAL_INFO['name'].split()[-1][0]}</div>
+            </div>
+            <div class="logo-name">{PERSONAL_INFO['name']}</div>
+        </div>
+        
+        <div class="profile-image-container">
+            <img src="https://via.placeholder.com/200x200/000000/FFFFFF?text={PERSONAL_INFO['name'].split()[0][0]}{PERSONAL_INFO['name'].split()[-1][0]}" 
+                 alt="Profile Image" class="profile-image">
+        </div>
+        
         <h1 class="name-title">{PERSONAL_INFO['name']}</h1>
         <h2 class="subtitle">{PERSONAL_INFO['title']}</h2>
         <p class="description">
@@ -372,32 +446,32 @@ def main():
                 
                 <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0;">
                     <div style="flex: 1; min-width: 200px;">
-                        <h4 style="color: #667eea; margin-bottom: 0.5rem;">📧 Email</h4>
+                        <h4 style="color: #000000; margin-bottom: 0.5rem;">📧 Email</h4>
                         <p>{PERSONAL_INFO['email']}</p>
                     </div>
                     <div style="flex: 1; min-width: 200px;">
-                        <h4 style="color: #667eea; margin-bottom: 0.5rem;">📱 Phone</h4>
+                        <h4 style="color: #000000; margin-bottom: 0.5rem;">📱 Phone</h4>
                         <p>{PERSONAL_INFO['phone']}</p>
                     </div>
                     <div style="flex: 1; min-width: 200px;">
-                        <h4 style="color: #667eea; margin-bottom: 0.5rem;">📍 Location</h4>
+                        <h4 style="color: #000000; margin-bottom: 0.5rem;">📍 Location</h4>
                         <p>{PERSONAL_INFO['location']}</p>
                     </div>
                 </div>
                 
                 <div style="margin-top: 2rem;">
-                    <h4 style="color: #667eea; margin-bottom: 1rem;">Connect with me</h4>
+                    <h4 style="color: #000000; margin-bottom: 1rem;">Connect with me</h4>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                         <a href="{PERSONAL_INFO['linkedin']}" target="_blank" 
-                           style="color: #667eea; text-decoration: none; font-weight: 500;">
+                           style="color: #000000; text-decoration: none; font-weight: 500; border: 1px solid #000000; padding: 0.5rem 1rem; border-radius: 5px; transition: all 0.3s ease;">
                             🔗 LinkedIn
                         </a>
                         <a href="{PERSONAL_INFO['github']}" target="_blank" 
-                           style="color: #667eea; text-decoration: none; font-weight: 500;">
+                           style="color: #000000; text-decoration: none; font-weight: 500; border: 1px solid #000000; padding: 0.5rem 1rem; border-radius: 5px; transition: all 0.3s ease;">
                             🐙 GitHub
                         </a>
                         <a href="{PERSONAL_INFO['twitter']}" target="_blank" 
-                           style="color: #667eea; text-decoration: none; font-weight: 500;">
+                           style="color: #000000; text-decoration: none; font-weight: 500; border: 1px solid #000000; padding: 0.5rem 1rem; border-radius: 5px; transition: all 0.3s ease;">
                             🐦 Twitter
                         </a>
                     </div>
